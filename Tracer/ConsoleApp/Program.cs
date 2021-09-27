@@ -78,8 +78,12 @@ namespace ConsoleApp
             var jsonSerializer = new JsonSerializer();
             var json = jsonSerializer.Serialize(res);
 
+            var xmlSerializer = new XMLSerializer();
+            var xml = xmlSerializer.Serialize(res);
+
             var writer = new ConsoleWriter();
             writer.Write(json);
+            writer.Write(xml);
         }
     }
 }
