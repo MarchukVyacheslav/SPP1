@@ -74,7 +74,12 @@ namespace ConsoleApp
             thread.Join();
 
             var res = tracer.GetTraceResult();
+
+            var jsonSerializer = new JsonSerializer();
+            var json = jsonSerializer.Serialize(res);
+
             var writer = new ConsoleWriter();
+            writer.Write(json);
         }
     }
 }
