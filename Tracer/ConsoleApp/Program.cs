@@ -84,6 +84,14 @@ namespace ConsoleApp
             var writer = new ConsoleWriter();
             writer.Write(json);
             writer.Write(xml);
+
+            var fileWriter = new FileWriter("json.txt");    
+            fileWriter.Write(json);
+
+            fileWriter.changeFileName("xml.txt");
+            fileWriter.Write(xml);
+
+            
         }
     }
 }
